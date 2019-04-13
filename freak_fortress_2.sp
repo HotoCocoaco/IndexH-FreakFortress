@@ -3627,6 +3627,16 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 				return Plugin_Changed;
 			}
 		}
+		case 220:  //游击手
+		{
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "800 ; 2 ; 190 ; 5 ; 109 ; 0.0 ; 70 ; 1.4");  
+			//800:超量治疗+100% 190：每秒回复5hp 109：获得来自医疗包的治疗量-100% 70：获得来自医生的治疗+40%
+			if(itemOverride!=INVALID_HANDLE)
+			{
+				item=itemOverride;
+				return Plugin_Changed;
+			}
+		}
 		case 305, 1079:  //Crusader's Crossbow, Festive Crusader's Crossbow 十字弩
 		{
 			new Handle:itemOverride=PrepareItemHandle(item, _, _, "2 ; 1.2 ; 17 ; 0.15 ; 318 ; 0.7");
