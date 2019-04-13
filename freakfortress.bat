@@ -1,2 +1,0 @@
-spcomp freak_fortress_2.sp
-pause
