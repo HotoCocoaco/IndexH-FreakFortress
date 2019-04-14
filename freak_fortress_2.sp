@@ -3629,7 +3629,7 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		}
 		case 220:  //游击手
 		{
-			new Handle:itemOverride=PrepareItemHandle(item, _, _, "800 ; 2 ; 190 ; 5 ; 109 ; 0.0 ; 69 ; 0.7 ; 2 ; 1.5 ; 76 ; 2");  
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "800 ; 3 ; 190 ; 10 ; 109 ; 0.0 ; 69 ; 0.2 ; 2 ; 1.5 ; 76 ; 3 ; 78 ; 3 ; 98 ; 30 ; 45 ; 1.4");  
 			//800:超量治疗+100% 190：每秒回复5hp 109：获得来自医疗包的治疗量-100% 70：获得来自医生的治疗-30%
 			if(itemOverride!=INVALID_HANDLE)
 			{
@@ -4178,15 +4178,15 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		new Handle:itemOverride;
 		if(iItemDefinitionIndex==811)  //The Huo-Long Heater 火龙机枪
 		{
-			itemOverride=PrepareItemHandle(item, _, _, "16 ; 20 ; 20 ; 1 ; 60 ; 0.5 ; 138 ; 1.5 ; 77 ; 0.5 ; 431 ; 11 ; 112 ; 0.05 ; 71 ; 1.8 ; 73 ; 6 ; 26 ; 50 ; 208 ; 1", false);
+			itemOverride=PrepareItemHandle(item, _, _, "16 ; 20 ; 20 ; 1 ; 60 ; 0.5 ; 138 ; 1.5 ; 77 ; 0.5 ; 431 ; 15 ; 112 ; 0.3 ; 71 ; 1.3 ; 73 ; 3 ; 26 ; 50 ; 208 ; 1", false);
 				//16: 击中+3血
-				//209: 对燃烧敌人mini爆击
 				//60: 50%火焰抗性
 				//2: 伤害+30%
 				//77: 弹药-50%
-				//431: 预热消耗11弹药
-				//112: 没5秒恢复 9% ammo
+				//431: 预热消耗15弹药
+				//112: 没5秒恢复 40% ammo
 				//71&73: 后续燃烧+80%伤害增加6秒
+				//208：击中目标被火焰吞噬
 				
 		}
 		else
