@@ -3629,8 +3629,8 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		}
 		case 220:  //游击手
 		{
-			new Handle:itemOverride=PrepareItemHandle(item, _, _, "800 ; 2 ; 190 ; 5 ; 109 ; 0.0 ; 70 ; 1.4");  
-			//800:超量治疗+100% 190：每秒回复5hp 109：获得来自医疗包的治疗量-100% 70：获得来自医生的治疗+40%
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "800 ; 2 ; 190 ; 5 ; 109 ; 0.0 ; 69 ; 0.7 ; 2 ; 1.5 ; 76 ; 2");  
+			//800:超量治疗+100% 190：每秒回复5hp 109：获得来自医疗包的治疗量-100% 70：获得来自医生的治疗-30%
 			if(itemOverride!=INVALID_HANDLE)
 			{
 				item=itemOverride;
