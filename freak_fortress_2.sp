@@ -4178,7 +4178,7 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		new Handle:itemOverride;
 		if(iItemDefinitionIndex==811)  //The Huo-Long Heater 火龙机枪
 		{
-			itemOverride=PrepareItemHandle(item, _, _, "16 ; 20 ; 20 ; 1 ; 60 ; 0.5 ; 138 ; 1.5 ; 77 ; 0.5 ; 431 ; 11 ; 112 ; 0.1 ; 71 ; 1.8 ; 73 ; 6 ; 26 ; 50", false);
+			itemOverride=PrepareItemHandle(item, _, _, "16 ; 20 ; 20 ; 1 ; 60 ; 0.5 ; 138 ; 1.5 ; 77 ; 0.5 ; 431 ; 11 ; 112 ; 0.05 ; 71 ; 1.8 ; 73 ; 6 ; 26 ; 50 ; 208 ; 1", false);
 				//16: 击中+3血
 				//209: 对燃烧敌人mini爆击
 				//60: 50%火焰抗性
