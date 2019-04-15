@@ -12,6 +12,9 @@ Plugin thread on AlliedMods: http://forums.alliedmods.net/showthread.php?t=18210
 Updated by Otokiru, Powerlord, and RavensBro after Rainbolt Dash got sucked into DOTA2
 
 Updated by Wliu, Chris, Lawd, and Carge after Powerlord quit FF2
+
+此修改版插件使用于咖啡厅的 某咖啡的禁书目录 服务器。插件为私享版，不可转载。
+目前暂时工作良好
 */
 #pragma semicolon 1
 
