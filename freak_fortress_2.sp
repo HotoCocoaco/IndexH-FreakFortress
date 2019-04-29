@@ -3513,7 +3513,7 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		}
 		case 171, 232:  //The Tribalman's Shiv, The Bushwacka 灌木丛和部落搜刮刀
 		{
-			new Handle:itemOverride=PrepareItemHandle(item, _, _, "204 ; 1 ; 58 ; 2 ; 207 ; 0.9", true);
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "204 ; 1 ; 58 ; 1.6 ; 207 ; 0.9", true);
 				//204: On Miss: Hit yourself. Idiot.
 				//44: Knockback on the target and shooter
 				//207: -60%自身伤害
@@ -3537,13 +3537,13 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 				return Plugin_Changed;
 			}
 		}
-		case 239, 1084, 1100:  //GRU, Festive GRU, Bread Bite 咬人的面包 逃跑拳套
+		case 239, 1084, 1100:  //GRU, Festive GRU, Bread Bite 咬人的面包 紧急逃跑拳套
 		{
-			new Handle:itemOverride=PrepareItemHandle(item, _, _, "1 ; 0.5 ; 107 ; 2 ; 128 ; 1 ; 191 ; -13 ; 772 ; 5 ; 177 ; 3.5", true);
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "1 ; 0.5 ; 107 ; 2 ; 128 ; 1 ; 191 ; -20 ; 772 ; 5 ; 177 ; 3.5", true);
 				//1: -50% damage
 				//107: +100% move speed
 				//128: Only when weapon is active
-				//191: -7 health/second
+				//191: -20 health/second
 				//772: Holsters 50% slower
 			if(itemOverride!=INVALID_HANDLE)
 			{
@@ -3632,7 +3632,7 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		}
 		case 220:  //游击手
 		{
-			new Handle:itemOverride=PrepareItemHandle(item, _, _, "800 ; 3 ; 190 ; 10 ; 109 ; 0.0 ; 69 ; 0.01 ; 2 ; 1.5 ; 76 ; 3 ; 78 ; 3 ; 98 ; 30 ; 45 ; 1.4");  
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "125 ; -124 ; 525 ; 1.5 ; 534 ; 1.5 ; 800 ; 2 ; 69 ; 2 ; 110 ; 10 ; 275 ; 1", true);  
 			//800:超量治疗+100% 190：每秒回复5hp 109：获得来自医疗包的治疗量-100% 69：获得来自医生的治疗-99%
 			if(itemOverride!=INVALID_HANDLE)
 			{
@@ -3642,7 +3642,7 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		}
 		case 305, 1079:  //Crusader's Crossbow, Festive Crusader's Crossbow 十字弩
 		{
-			new Handle:itemOverride=PrepareItemHandle(item, _, _, "2 ; 1.2 ; 17 ; 0.15 ; 318 ; 0.7");
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "2 ; 1.2 ; 17 ; 0.15 ; 318 ; 0.7 ; 26 ; 50");
 				//2: +20% damage
 				//17: +15% uber on hit
 				//318: 装弹速度+30%
@@ -3665,7 +3665,7 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		}
 		case 142:  //机械臂
 		{
-			new Handle:itemOverride=PrepareItemHandle(item, _, _, "26 ; 90 ; 5 ; 0.7 ; 16 ; 60 ; 124 ; 1 ; 353 ; 1 ; 321 ; 0.7");
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "26 ; 90 ; 5 ; 0.7 ; 16 ; 60 ; 124 ; 1 ; 321 ; 0.7 ; 287 ; 1.3");
 				//26: +90 max health
 				//321: +290% build speed boost
 				//16: on hit gain up 60 health
@@ -3690,7 +3690,7 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		}
 		case 527:  //寡妇
 		{
-			new Handle:itemOverride=PrepareItemHandle(item, _, _, "298 ; 10 ; 614 ; 1 ; 732 ; 0.7 ; 178 ; 0.5 ; 45 ; 1.3");
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "298 ; 10 ; 614 ; 1 ; 732 ; 0.7 ; 178 ; 0.5 ; 45 ; 1.3 ; 2 ; 1.4");
 				//298: 每一发-10金属
 				//614&732:拿着的时候不可以从补给站吃金属，吃金属只有70%
 				//178: 切出速度50%
@@ -3792,7 +3792,7 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		}
 		case 772:  //Baby Face's Blaster 娃娃脸
 		{
-			new Handle:itemOverride=PrepareItemHandle(item, _, _, "2 ; 1.25 ; 125 ; -100 ; 394 ; 0.85 ; 418 ; 1 ; 532 ; 0.5 ; 54 ; 0.9 ; 275 ; 1 ; 76 ; 1.49 ; 78 ; 1.5 ; 737 ; 1 ; 3 ; 0.7", false);
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "2 ; 1.25 ; 125 ; -100 ; 394 ; 0.85 ; 418 ; 1 ; 532 ; 0.5 ; 275 ; 1 ; 76 ; 1.49 ; 78 ; 1.5 ; 737 ; 1", false);
 				//2: +25% damage bonus
 				//109: -50% health from packs on wearer
 				//125: -100 max health
@@ -3813,7 +3813,7 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		}
 		case 1103:  //Back Scatter 偷袭之力
 		{
-			new Handle:itemOverride=PrepareItemHandle(item, _, _, "179 ; 1 ; 2 ; 1.7 ; 76 ; 1.49 ; 97 ; 0.8");
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "179 ; 1 ; 2 ; 1.4 ; 76 ; 1.49 ; 97 ; 0.8");
 				//179: Crit instead of mini-critting
 				//76:弹药+49%
 				//97:换弹加快20%
@@ -3825,7 +3825,7 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		}
 		case 329:  //The Jag 尖齿扳手
 		{
-			new Handle:itemOverride=PrepareItemHandle(item, _, _, "92 ; 2.3 ; 204 ; 1 ; 394 ; 0.28 ; 95 ; 0.8 ; 1 ; 0.75 ; 59 ; 0.4");
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "92 ; 2.3 ; 204 ; 1 ; 394 ; 0.28 ; 95 ; 0.8 ; 1 ; 0.75 ; 59 ; 0.4 ; 287 ; 1.1");
 				//92: Construction hit speed boost increased by 130%
 				//204: On Miss: Hit yourself. Idiot.
 				//44: Knockback on the target and shooter
@@ -3859,7 +3859,7 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		}
 		case 155:  //南部的款待
 		{
-			new Handle:itemOverride=PrepareItemHandle(item, _, _, "179 ; 1 ; 204 ; 1 ; 339 ; 1 ; 340 ; 1 ; 345 ; 1.33 ; 58 ; 1.4 ; 149 ; 1 ; 207 ; 0.6 ; 344 ; 1.3", true);
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "179 ; 1 ; 204 ; 1 ; 339 ; 1 ; 340 ; 1 ; 345 ; 1.33 ; 58 ; 1.4 ; 149 ; 1 ; 207 ; 0.6 ; 344 ; 1.3 ; 287 ; 1.1", true);
 				//179: Crit instead of mini-critting
 				//204: 我打我自己
 				//339&340: 让spy现身
@@ -3939,7 +3939,7 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		}
 		case 30665:  //流星狙击枪
 		{
-			new Handle:itemOverride=PrepareItemHandle(item, _, _, "16 ; 10 ; 76 ; 1.5 ; 304 ; 2.3 ; 91 ; 0.2", false);
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "16 ; 10 ; 76 ; 1.5 ; 304 ; 4 ; 91 ; 0.2", false);
 				
 			if(itemOverride!=INVALID_HANDLE)
 			{
@@ -3947,7 +3947,79 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 				return Plugin_Changed;
 			}
 		}
+		case 304:  //器官切割器
+		{
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "110 ; 50 ; 8 ; 1.4 ; 201 ; 0.4", false);
+				
+			if(itemOverride!=INVALID_HANDLE)
+			{
+				item=itemOverride;
+				return Plugin_Changed;
+			}
+		}
+		case 173:  //维他锯
+		{
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "366 ; 3 ; 877 ; 1 ; 19 ; 1.5", false);
+				
+			if(itemOverride!=INVALID_HANDLE)
+			{
+				item=itemOverride;
+				return Plugin_Changed;
+			}
+		}
+		case 998:  //疫苗注射枪
+		{
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "144 ; 3 ; 10 ; 1.9 ; 739 ; 0.67 ; 479 ; 0.34 ; 292 ; 1 ; 293 ; 2 ; 473 ; 3 ; 503 ; 0.1 ; 506 ; 0.75 ; 504 ; 0.1 ; 507 ; 0.75 ; 505 ; 0.1 ; 508 ; 0.75 ; 499 ; 1", true);
+				//144 不管
+				//499:充能护盾
+			if(itemOverride!=INVALID_HANDLE)
+			{
+				item=itemOverride;
+				return Plugin_Changed;
+			}
+		}
 		//对于特定Index的attributes设定
+		//霰弹枪：因为包括皮肤武器的特殊index。（非战绘）必须单个单个设定
+		case 10, 199, 1141, 15003, 15016, 15044, 15047:  //士兵霰弹枪 199为奇异霰弹枪，1141为节日霰弹枪
+		{
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "2 ; 1.7");
+				//2：伤害x1.5倍 37，主武器弹药x2.7倍（隐藏）
+			if(itemOverride!=INVALID_HANDLE)
+			{
+				item=itemOverride;
+				return Plugin_Changed;
+			}
+		}
+		case 15085, 15109, 15132, 15133, 15152:  //皮肤霰弹枪
+		{
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "2 ; 1.7");
+				//2：伤害x1.5倍 37，主武器弹药x1.5倍（隐藏）副武器也增加2（隐藏）
+			if(itemOverride!=INVALID_HANDLE)
+			{
+				item=itemOverride;
+				return Plugin_Changed;
+			}
+		}
+		case 12, 11:  //火焰兵 机枪手霰弹枪
+		{
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "2 ; 1.7");
+				//2：伤害x1.5倍 37，主武器弹药x1.5倍（隐藏）副武器也增加2（隐藏）
+			if(itemOverride!=INVALID_HANDLE)
+			{
+				item=itemOverride;
+				return Plugin_Changed;
+			}
+		}
+		case 9:  //火焰兵 机枪手霰弹枪
+		{
+			new Handle:itemOverride=PrepareItemHandle(item, _, _, "2 ; 1.7");
+				//2：伤害x1.5倍 37，主武器弹药x1.5倍（隐藏）副武器也增加2（隐藏）
+			if(itemOverride!=INVALID_HANDLE)
+			{
+				item=itemOverride;
+				return Plugin_Changed;
+			}
+		}
 	}
 	//开始对一种classname 的设定，这些包括了枪魂的皮肤枪 参阅https://wiki.alliedmods.net/Team_Fortress_2_Item_Definition_Indexes
 	if(TF2_GetPlayerClass(client)==TFClass_Pyro && (!StrContains(classname, "tf_weapon_flamethrower", false))) //火焰喷射器
@@ -3997,10 +4069,31 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		}
 		else
 		{
-			itemOverride=PrepareItemHandle(item, _, _, "97 ; 0.8 ; 2 ; 1.35 ; 76 ; 1.36 ; 78 ; 1.5", false);
+			itemOverride=PrepareItemHandle(item, _, _, "97 ; 0.8 ; 2 ; 1.8 ; 76 ; 1.36 ; 78 ; 1.5", false);
 				//97:换弹速度加快+20%
 				//2:伤害+35%
 				//76:弹药+36%
+		}
+
+		if(itemOverride!=INVALID_HANDLE)
+		{
+			item=itemOverride;
+			return Plugin_Changed;
+		}
+	}
+	
+	if(TF2_GetPlayerClass(client)==TFClass_Engineer && (!StrContains(classname, "tf_weapon_wrench", false))) //工程师扳手
+	{
+		new Handle:itemOverride;
+		if(iItemDefinitionIndex==7)  //原配扳手
+		{
+			itemOverride=PrepareItemHandle(item, _, _, "287 ; 1.1", false);
+				//287:步哨枪伤害+10%
+		}
+		else
+		{
+			itemOverride=PrepareItemHandle(item, _, _, "287 ; 1.1", false);
+				//287:步哨枪伤害+10%
 		}
 
 		if(itemOverride!=INVALID_HANDLE)
@@ -4015,7 +4108,7 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		new Handle:itemOverride;
 		if(iItemDefinitionIndex==1150)  //快速粘弹
 		{
-			itemOverride=PrepareItemHandle(item, _, _, "299 ; 1 ; 57 ; 1 ; 16 ; 30 ; 135 ; 0.3 ; 78 ; 3 ; 2 ; 1.3 ; 207 ; 3.1 ; 21 ; 0.41 ; 408 ; 1", false);
+			itemOverride=PrepareItemHandle(item, _, _, "57 ; 1 ; 16 ; 30 ; 78 ; 3 ; 138 ; 0.6 ; 126 ; -0.6", false);
 				//401: 饥饿66%
 				//57: +1hp
 				//16: +30 hit
@@ -4026,10 +4119,10 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		}
 		else
 		{
-			itemOverride=PrepareItemHandle(item, _, _, "57 ; 1 ; 16 ; 30 ; 408 ; 1 ; 135 ; 0.4 ; 21 ; 0.4 ; 2 ; 1.5 ; 78 ; 3 ; 207 ; 3.4", false);
+			itemOverride=PrepareItemHandle(item, _, _, "57 ; 1 ; 16 ; 30 ; 78 ; 3 ; 138 ; 0.7", false);
 				//401: 不饿了
 				//57: 每秒+1
-				//16: 命中+50血
+				//16: 命中+30血
 				//408: 对非燃烧敌人爆击
 				//135: 火箭跳跃-50%
 				//78: 副武器子弹增加50%
@@ -4105,20 +4198,14 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		new Handle:itemOverride;
 		if(iItemDefinitionIndex==59)  //The Dead Ringer 假死之铃
 		{
-			itemOverride=PrepareItemHandle(item, _, _, "773 ; 1.3 ; 159 ; 1", false);
+			itemOverride=PrepareItemHandle(item, _, _, "773 ; 1.3 ; 159 ; 1 ; 34 ; 0.7", false);
 				//773：部署速度慢30%
 				
 		}
 		else
 		{
-			itemOverride=PrepareItemHandle(item, _, _, "50 ; 0.3 ; 728 ; 1 ; 729 ; 0.7 ; 253 ; 1 ; 83 ; 1.3 ; 159 ; 1", false); //隐身手表
-				//401: 不饿了
-				//50: Absorbs -70% damage while cloaked
-				//729: 从弹药包获得能量-30%
-				//728：隐身时不能吃弹药补给能量
-				//253: 进入隐形时间+1秒
-				//83: 隐身时间+30%
-				//159: 闪烁时间+1秒
+			itemOverride=PrepareItemHandle(item, _, _, "728 ; 1", false); //隐身手表
+				//728:隐身时不能吃弹药包
 		}
 
 		if(itemOverride!=INVALID_HANDLE)
@@ -4139,8 +4226,9 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		}
 		else
 		{
-			itemOverride=PrepareItemHandle(item, _, _, "177 ; 1.3", false);
+			itemOverride=PrepareItemHandle(item, _, _, "177 ; 1.3 ; 123 ; 1.3", false);
 				//177: 130%取出速度
+				//123: 激活武器时速度+30%
 		}
 
 		if(itemOverride!=INVALID_HANDLE)
@@ -4181,7 +4269,7 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 		new Handle:itemOverride;
 		if(iItemDefinitionIndex==811)  //The Huo-Long Heater 火龙机枪
 		{
-			itemOverride=PrepareItemHandle(item, _, _, "16 ; 20 ; 20 ; 1 ; 60 ; 0.5 ; 138 ; 1.5 ; 77 ; 0.5 ; 431 ; 15 ; 112 ; 0.3 ; 71 ; 1.3 ; 73 ; 3 ; 26 ; 50 ; 208 ; 1", false);
+			itemOverride=PrepareItemHandle(item, _, _, "16 ; 20 ; 20 ; 1 ; 60 ; 0.5 ; 138 ; 1.5 ; 77 ; 0.5 ; 431 ; 30 ; 112 ; 0.3 ; 26 ; 50 ; 208 ; 1", false);
 				//16: 击中+3血
 				//60: 50%火焰抗性
 				//2: 伤害+30%
@@ -4236,7 +4324,7 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 
 	if(!StrContains(classname, "tf_weapon_syringegun_medic"))  //Syringe guns 注射枪
 	{
-		new Handle:itemOverride=PrepareItemHandle(item, _, _, "17 ; 0.05 ; 144 ; 1 ; 16 ; 5", true);
+		new Handle:itemOverride=PrepareItemHandle(item, _, _, "17 ; 0.05 ; 144 ; 1 ; 16 ; 5 ; 26 ; 50", true);
 			//17: 5% uber on hit
 			//144: Sets weapon mode - *possibly* the overdose speed effect
 			//16: 击中+5血
@@ -4248,7 +4336,7 @@ public Action:TF2Items_OnGiveNamedItem(client, String:classname[], iItemDefiniti
 	}
 	else if(!StrContains(classname, "tf_weapon_medigun"))  //Mediguns 医疗枪
 	{
-		new Handle:itemOverride=PrepareItemHandle(item, _, _, "11 ; 1.5 ; 144 ; 2.0 ; 199 ; 0.75 ; 314 ; 4 ; 123 ; 1.2 ; 10 ; 1.3 ; 26 ; 50 ; 8 ; 1.6",true);
+		new Handle:itemOverride=PrepareItemHandle(item, _, _, "11 ; 1.5 ; 144 ; 2.0 ; 199 ; 0.75 ; 314 ; 4 ; 123 ; 1.2 ; 10 ; 1.3 ; 8 ; 1.6",true);
 			//11: +50% overheal bonus
 			//144: Quick-fix speed/jump effects
 			//199: Deploys 25% faster
@@ -4434,7 +4522,7 @@ public Action:CheckItems(Handle:timer, any:userid)
 	if(IsValidEntity(weapon) && GetEntProp(weapon, Prop_Send, "m_iItemDefinitionIndex")==60)  //Cloak and Dagger
 	{
 		TF2_RemoveWeaponSlot(client, 4);
-		SpawnWeapon(client, "tf_weapon_invis", 30, 1, 0, "");
+		SpawnWeapon(client, "tf_weapon_invis", 30, 1, 0, "728 ; 1");
 	}
 
 	if(bMedieval)
@@ -4463,7 +4551,12 @@ public Action:CheckItems(Handle:timer, any:userid)
 			case 402:  //Bazaar Bargain
 			{
 				TF2_RemoveWeaponSlot(client, TFWeaponSlot_Primary);
-				SpawnWeapon(client, "tf_weapon_sniperrifle", 14, 1, 0, "");
+				SpawnWeapon(client, "tf_weapon_sniperrifle", 14, 1, 0, "16 ; 10 ; 76 ; 1.5");
+			}
+			case 1098:  //经典狙击步枪
+			{
+				TF2_RemoveWeaponSlot(client, TFWeaponSlot_Primary);
+				SpawnWeapon(client, "tf_weapon_sniperrifle", 14, 1, 0, "16 ; 10 ; 76 ; 1.5");  //Sniper Rifle
 			}
 		}
 	}
@@ -4508,7 +4601,7 @@ public Action:CheckItems(Handle:timer, any:userid)
 		shield[client]=-1;
 	}*/
 	
-	if(IsValidEntity(FindPlayerBack(client, 642)))  //Cozy Camper
+	if(IsValidEntity(FindPlayerBack(client, 642)))  //Cozy Camper 狙击背包 加一个smg
 	{
 		SpawnWeapon(client, "tf_weapon_smg", 16, 1, 6, "149 ; 1.5 ; 15 ; 0.0 ; 2 ; 1.5");
 	}
@@ -4545,7 +4638,7 @@ public Action:CheckItems(Handle:timer, any:userid)
 			case 43:  //KGB 杀戮拳套替换
 			{
 				TF2_RemoveWeaponSlot(client, TFWeaponSlot_Melee);
-				SpawnWeapon(client, "tf_weapon_fists", 239, 1, 6, "1 ; 0.5 ; 107 ; 2 ; 128 ; 1 ; 191 ; -13 ; 772 ; 5 ; 177 ; 3.5");  //GRU
+				SpawnWeapon(client, "tf_weapon_fists", 239, 1, 6, "1 ; 0.5 ; 107 ; 2 ; 128 ; 1 ; 191 ; -20 ; 772 ; 5 ; 177 ; 3.5");  //GRU
 					//参考面包
 			}
 			case 357:  //Half-Zatoichi
@@ -5310,7 +5403,8 @@ public Action:ClientTimer(Handle:timer)
 			         !StrContains(classname, "tf_weapon_compound_bow") ||
 			         !StrContains(classname, "tf_weapon_crossbow") ||
 			         !StrContains(classname, "tf_weapon_pistol") ||
-			         !StrContains(classname, "tf_weapon_handgun_scout_secondary"))
+			         !StrContains(classname, "tf_weapon_handgun_scout_secondary") ||
+					 !StrContains(classname, "tf_weapon_pipebomblauncher"))
 			{
 				addthecrit=true;
 				if(class==TFClass_Scout && cond==TFCond_HalloweenCritCandy)
@@ -6031,7 +6125,7 @@ public Action:OnObjectDeflected(Handle:event, const String:name[], bool:dontBroa
 	new boss=GetBossIndex(GetClientOfUserId(GetEventInt(event, "ownerid")));
 	if(boss!=-1 && BossCharge[boss][0]<100.0)
 	{
-		BossCharge[boss][0]+=7.0;  //TODO: Allow this to be customizable
+		BossCharge[boss][0]+=15.0;  //TODO: Allow this to be customizable 被火焰兵吹时加愤怒值
 		if(BossCharge[boss][0]>100.0)
 		{
 			BossCharge[boss][0]=100.0;
@@ -6643,7 +6737,7 @@ public Action:OnTakeDamage(client, &attacker, &inflictor, &Float:damage, &damage
 					{
 						if(damagecustom==TF_CUSTOM_HEADSHOT)
 						{
-							damage=130.0;  //Final damage 255
+							damage=200.0;  //Final damage 255
 							return Plugin_Changed;
 						}
 					}
@@ -6765,7 +6859,7 @@ public Action:OnTakeDamage(client, &attacker, &inflictor, &Float:damage, &damage
 					{
 						if(FF2flags[attacker] & FF2FLAG_ROCKET_JUMPING)
 						{
-							damage=(Pow(float(BossHealthMax[boss]), 0.74074)+256.0-(Marketed[client]/128.0*float(BossHealthMax[boss])))/2;
+							damage=(Pow(float(BossHealthMax[boss]), 0.84074)+256.0-(Marketed[client]/128.0*float(BossHealthMax[boss])))/2;
 							damagetype|=DMG_CRIT;
 
 							if(Marketed[client]<5)
@@ -6781,11 +6875,11 @@ public Action:OnTakeDamage(client, &attacker, &inflictor, &Float:damage, &damage
 							return Plugin_Changed;
 						}
 					}
-					case 525, 595:  //Diamondback, Manmelter
+					case 525, 595:  //Diamondback, Manmelter 响尾蛇
 					{
 						if(GetEntProp(attacker, Prop_Send, "m_iRevengeCrits"))  //If a revenge crit was used, give a damage bonus
 						{
-							damage=135.0;  //135x3 final damage
+							damage=200.0;  //135x3 final damage
 							return Plugin_Changed;
 						}
 					}
