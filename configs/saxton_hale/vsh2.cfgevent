@@ -1,0 +1,903 @@
+"config"
+{
+	// same as "weapons" with "*" params, except it doesnt limit to only the player and gets executed before "weapons"
+	"globals"
+	{
+		"reset_vsh2player"
+		{
+			"<enum>"
+			{
+				"procedure"	"ConfigEvent_AllocateParams"
+
+				"<enum>"
+				{
+					"name"	"ZERO"
+					"type"	"int"
+					"value"	"0"
+				}
+			}
+			"<enum>"
+			{
+				"procedure"	"ConfigEvent_TeleportReset"
+				"vsh2target"	"player"
+			}
+			"<enum>"
+			{
+				"procedure"	"ConfigEvent_SetProp"
+				"vsh2target"	"player"
+
+				"<enum>"
+				{
+					"custom"	"vsh2player"
+					"prop"	"iChainStab"
+					"value"	"ZERO"
+				}
+			}
+			"<enum>"
+			{
+				"procedure"	"ConfigEvent_SetProp"
+				"vsh2target"	"player"
+
+				"<enum>"
+				{
+					"custom"	"vsh2player"
+					"prop"	"bIsZombie"
+					"value"	"false"
+				}
+			}
+			"<enum>"
+			{
+				"procedure"	"ConfigEvent_ChainStab_Reset"
+				"vsh2target"	"player"
+			}
+		}
+		"downloads"
+		{
+			"<enum>"
+			{
+				"procedure"	"ConfigEvent_Download"
+
+				"sounds"
+				{
+					"<enum>"	"freak_fortress_2/killingmann/theme_secondlife_fx.mp3"
+					"<enum>"	"airshot.wav"
+				}
+				"models"
+				{
+					"<enum>"	"models/player/scout.mdl"
+				}
+			}
+		}
+	}
+	"weapons"
+	{
+		//Scout 侦察兵
+		"773"	//Pretty Boy's Pocket Pistol 帅气男孩的袖珍手枪
+		{
+			"btd_takedamage"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_GetProp"
+					"target"	"player"
+
+					"<enum>"
+					{
+
+						"name"	"iMyHealth"
+						"type"	"int"
+						"size"	"7"
+						"prop"	"m_iHealth"
+						"datamap"	"false"
+					}
+				}
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_ManageSelfHeal"
+					"target"	"player"
+
+					"health"
+					{
+						"formula"	"A + 5"
+						"<enum>"
+						{
+							"token"	"A"
+							"value"	"i@iMyHealth"
+						}
+					}
+					"clamp"		 "199"
+				}
+			}
+		}
+		"44"	//Sandman 睡魔
+		{
+			"btd_takedamage"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_GetProp"
+					"enttarget"	"weapon"
+
+					"<enum>"
+					{
+						"name"	"weapon_index"
+						"type"	"int"
+						"prop"	"m_iItemDefinitionIndex"
+						"datamap"	"false"
+					}
+				}
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_JumpIf"
+					"first"	"@weapon_index"
+					"second"	"44"
+					"operators"	"1000001"
+					"skips"	"1"
+				}
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_SandManStun"
+					"target"	"player"
+					"vsh2victim"	"victim"
+
+					"level1"	"1.0"
+					"level2"	"2.0"
+					"level3"	"3.0"
+					"level4"	"4.0"
+					"level5"	"5.0"
+					"level6"	"6.0"
+					"level7"	"7.0"
+				}
+			}
+		}
+		//Soldier 士兵
+		"441"	//Cow Mangler 5000 绞牛机5000
+		{
+			"banner_start"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_SetClipEnergy"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+
+					"slot"	"0"
+					"ammount"	"80.0"
+					"max"	"20.0"
+					"duration"	"5.0"
+				}
+			}
+		}
+		"226"	//The Battalion's Backup 军队的支援
+		{
+			"banner_start"
+			{
+				"<enum>"
+				{
+					"procedure"	 "ConfigEvent_SummonZombie"
+					"minion can execute"	"true"
+
+					"vsh2target"	 "owner"
+					"max players"	 "3"
+
+					"slay"			"true"  // slay when the owner dies
+					"no boss"		"true"  // dont summon as minion if the player was previously a boss
+
+					"allow weapons" "false" // allow minions to use execute weapons config ('bCfgSysXAllow')
+					"delay"			"0.1"	// spawn minion after 'delay' seconds
+					"spawn"		 "false" // true to teleport directly to spawn
+
+					"conditions"
+					{
+						"<enum>"
+						{
+							"id"	"25"	//Bleed cond 流血
+							"value" "-1.0"
+						}
+					}
+
+					"info"
+					{
+						"<enum>"
+						{
+							"class"	 "scout"
+							"health"	"125.0"
+							"model"	 ""
+
+							"text"  "你现在是 %N 召唤的僵尸！攻击敌人！"
+
+							"classname"  "tf_weapon_bat"
+							"attributes" "68 ; -1 ; 1 ; 0.4 ; 881 ; -15"
+							"index"	  "190"
+							"ammo"		"-9"
+							"clip"		"-9"
+
+							"particle"	"ghost_smoke"
+						}
+					}
+				}
+			}
+		}
+		"129, 1001"	//Buff Banner 战旗
+		{
+			"banner_start"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_SetAttribWep"
+					"vsh2target"	"owner"
+					"slot"	"0"
+
+					"attributes"
+					{
+						"<enum>"
+						{
+							"index"	"6"
+							"value"	"0.1"
+							"duration"	"5.0"
+						}
+						"<enum>"
+						{
+							"index"	"869"
+							"value"	"1.0"
+							"duration"	"5.0"
+						}
+					}
+				}
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_AddClip"
+					"vsh2target"	"owner"
+
+					"amount"	"16"
+					"max"	"4"
+					"slot"	"0"
+					"duration"	"5.0"
+				}
+			}
+		}
+		"354"	//Concheror 征服者战旗
+		{
+			"banner_start"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_AddAmmo"
+					"vsh2target"	"owner"
+
+					"amount"	"30"
+					"slot"	"0"
+				}
+			}
+		}
+		"442"	//Righteous Bison 正义野牛
+		{
+			"think"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_SetClipEnergy"
+					"vsh2target"	"player"
+
+					"amount"	"100.0"
+					"max"	"100.0"
+					"slot"	"1"
+					"duration"	"-1.0"
+				}
+			}
+		}
+		
+		
+		
+		//Pyro 火焰兵
+		"21, 208, 40, 215, 659, 741, 798, 807, 887, 896, 905, 914, 963, 972, 1146, 1178, 15005, 15017, 15030, 15034, 15049, 15054, 15066, 15067, 15068, 15089, 15090, 15115, 15141, 30474"
+		{
+			"btd_takedamage"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_GetProp"
+					"target"	"player"
+
+					"<enum>"
+					{
+						"name"	"iMyHealth"
+						"type"	"int"
+						"size"	"4"
+						"prop"	"m_iHealth"
+						"datamap"	"false"
+					}
+				}
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_ManageSelfHeal"
+					"target"	"player"
+
+					"health"
+					{
+						"formula"	"A + 3"
+						"<enum>"
+						{
+							"token"	"A"
+							"value"	"i@iMyHealth"
+						}
+					}
+					"clamp"		 "280"
+				}
+			}
+		}
+		"594"	//Phlogistinator 燃素喷射器
+		{
+			"btd_takedamage"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_GetProp"
+					"target"	"player"
+
+					"<enum>"
+					{
+						"name"	"iMyHealth"
+						"type"	"int"
+						"size"	"4"
+						"prop"	"m_iHealth"
+						"datamap"	"false"
+					}
+				}
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_ManageSelfHeal"
+					"target"	"player"
+
+					"health"
+					{
+						"formula"	"A + 1"
+						"<enum>"
+						{
+							"token"	"A"
+							"value"	"i@iMyHealth"
+						}
+					}
+					"clamp"		 "220"
+				}
+			}
+		}
+		//Demoman 爆破手
+		"131, 1144"	//Chargin' Targe 冲锋盾
+		{
+			"btd_takedamage"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_GetProp"
+					"<passive>"	"true"
+					"enttarget"	"weapon"
+
+					"<enum>"
+					{
+						"name"	"weapon_index"
+						"type"	"int"
+						"prop"	"m_iItemDefinitionIndex"
+						"datamap"	"false"
+					}
+				}
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_JumpIf"
+					"<passive>"	"true"
+					"first"	"@weapon_index"
+					"csecond"	"131"
+					"operators"	"1"
+					"skips"	"1"
+				}
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_JumpIf"
+					"<passive>"	"true"
+					"first"	"@weapon_index"
+					"second"	"1144"
+					"operators"	"1000001"
+					"skips"	"1"
+				}
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_ManageSelfTFCond"
+					"<passive>"	"true"
+					"target"	"player"
+					"add"	"true"
+					"conditions"
+					{
+						"<enum>"
+						{
+							"id"	"26"
+							"duration"	"4.0"
+						}
+					}
+				}
+			}
+		}
+		"406"	//Splendid Screen 辉煌护盾
+		{
+			"btd_takedamage"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_GetProp"
+					"<passive>"	"true"
+					"enttarget"	"weapon"
+
+					"<enum>"
+					{
+						"name"	"weapon_index"
+						"type"	"int"
+						"prop"	"m_iItemDefinitionIndex"
+						"datamap"	"false"
+					}
+				}
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_JumpIf"
+					"<passive>"	"true"
+					"first"	"@weapon_index"
+					"second"	"406"
+					"operators"	"1000001"
+					"skips"	"1"
+				}
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_ManageSelfTFCond"
+					"<passive>"	"true"
+					"vsh2target"	"victim"
+
+					"add"	"true"
+					"conditions"
+					{
+						"<enum>"
+						{
+							"id"	"127"
+							"duration"	"-1.0"
+						}
+					}
+				}
+			}
+		}
+		"1099"	//Tide Turner 力挽狂澜
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_SetAttribWep"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"slot"	"2"
+
+					"attributes"
+					{
+						"<enum>"
+						{
+							
+							"index"	"778"
+							"value"	"0.75"
+							"duration"	"-1.0"
+						}
+					}
+				}
+			}
+		}
+
+		
+		//Heavy 机枪手
+		"43"	//Killing Gloves of Boxing 杀戮拳击手套
+		{
+			"btd_takedamage"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_ManageSelfTFCond"
+					"add"	"true"
+					"conditions"
+					{
+						"vsh2target"	"player"
+						"id"	"56"
+						"duration"	"7.0"
+					}
+				}
+			}
+		}
+		"310"	//Warrior's Spirit 勇士之魂
+		{
+			"btd_takedamage"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_GetProp"
+					"target"	"player"
+
+					"<enum>"
+					{
+						"name"	"iMyHealth"
+						"type"	"int"
+						"size"	"4"
+						"prop"	"m_iHealth"
+						"datamap"	"false"
+					}
+				}
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_ManageSelfHeal"
+					"target"	"player"
+					"health"
+					{
+						"formula"	"A + 95"
+						"<enum>"
+						{
+							"token" "A"
+							"value"	"i@iMyHealth"
+						}
+					}
+					"clamp"	"500"
+				}
+			}
+		}
+		//Engineer 工程师
+		
+		
+		"140, 1086, 30668"	//Wrangler 遥控手柄
+		{
+			"think"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_ManageSelfTFCond"
+					"vsh2target"	"player"
+					"add"	"true"
+					"conditions"
+					{
+						"<enum>"
+						{
+							"id"	"78"
+							"duration"	"0.15"
+						}
+					}
+				}
+			}
+		}
+		"589"	//Eureka Effect 传送扳手
+		{
+			"eureka_teleport"
+			{
+				"<enum>"
+				{
+					"procedure"		"ConfigEvent_TeleportBlock"	//only block if in cooldown
+					"vsh2target"	"player"
+				}
+			}
+			"eureka_teleported"
+			{
+				"<enum>"
+				{
+					"procedure"		"ConfigEvent_TeleportCooldown"
+					"vsh2target"	"player"
+
+					"cooldown"		"60.0"	//45 seconds to set bIsEukuraEffectCD to false
+				}
+				"<enum>"
+				{
+					"procedure"		"ConfigEvent_MakeStun"
+					"vsh2target"	"player"
+
+					"duration"		"15.0"
+					"slowdown"	"0.0"
+					"flags"		"110"	//TF_STUNFLAG_BONKSTUCK | TF_STUNFLAG_LIMITMOVEMENT
+				}
+				"<enum>"
+				{
+					"procedure"		"ConfigEvent_SetClientGlow"
+					"vsh2target"	"player"
+
+					"addtime"		"30.0"
+				}
+				"<enum>"
+				{
+					"procedure"		"ConfigEvent_MakeBleed"
+					"vsh2target"	"player"
+
+					"duration"		"9.0"
+				}
+			}
+			"playerhud"
+			{
+				"<enum>"
+				{
+					"procedure"		"ConfigEvent_TeleportHUD"
+					"<passive>"		"true"
+					"vsh2target"	"player"	//Write a 'EukuraEffectCooldown'
+					"string"	" | 传送扳手：%f 秒"
+				}
+			}
+		}
+		//Medic 医生
+		"36"	//Blutsauger 吸血鬼针筒枪
+		{
+			"btd_takedamage"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_GetProp"
+					"target"	"player"
+
+					"<enum>"
+					{
+						"name"	"iMyHealth"
+						"type"	"int"
+						"size"	"4"
+						"prop"	"m_iHealth"
+						"datamap"	"false"
+					}
+				}
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_ManageSelfHeal"
+					"target"	"player"
+
+					"health"
+					{
+						"formula"	"A + 5"
+						"<enum>"
+						{
+							"token"	"A"
+							"value"	"i@iMyHealth"
+						}
+					}
+					"clamp"		 "270"
+				}
+			}
+		}
+		"305, 1079"	//Crusader's Crossbow 十字军之弩
+		{
+			"projectile_touch"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_Explode"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+
+					"enttarget"	"projectile"
+					"damage"	"45.0"
+					"radius"	"120.0"
+				}
+			}
+		}
+		"35"	//The Kritzkrieg 闪电战医疗枪
+		{
+			"think"
+			{
+				"<enum>"
+				{
+					"procedure"		"ConfigEvent_ManagePatientTFCond"
+					"vsh2target"	"player"
+
+					"add"		"true"
+					"conditions"
+					{
+						"<enum>"
+						{
+							"id"		"16"
+							"duration"		"0.15"
+						}
+					}
+				}
+			}
+			"uber_deploy"
+			{
+				"<enum>"
+				{
+					"procedure"		"ConfigEvent_ManageSelfTFCond"
+					"vsh2target"	"medic"
+
+					"add"		"true"
+					"conditions"
+					{
+						"<enum>"
+						{
+							"id"		"42"
+							"duration"		"8.0"
+						}
+					}
+				}
+			}
+			"uber_loop"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_ManageAreaTFCond"
+					"vsh2target"	"medic"
+
+					"flags"	"1"
+					"distance"	"250.0"
+					"add"	"true"
+					"conditions"
+					{
+						"<enum>"
+						{
+							"id"	"11"
+							"duration"	"3.0"
+						}
+					}
+				}
+			}
+		}
+		"411"	//Quick Fix 快速医疗枪
+		{
+			"uber_loop"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_ManageAreaTFCond"
+					"vsh2target"	"medic"
+
+					"flags"	"1"
+					"add"	"true"
+					"distance"	"300.0"
+					"conditions"
+					{
+						"<enum>"
+						{
+							"id"	"32"
+							"duration"	"5.0"
+						}
+					}
+				}
+			}
+		}
+		"413"	//Solemn Vow 希波克拉底的塑像
+		{
+			"playerhud"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_ViewRage"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+
+					"string"    "Boss Rage: %f"
+				}
+			}
+		}
+		//Sniper 狙击手
+		"56, 1005, 1092"	//Huntsman 猎人短弓
+		{
+			"projectile_touch"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_Explode"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+
+					"enttarget"	"projectile"
+					"damage"	"60.0"
+					"radius"	"150.0"
+				}
+			}
+		}
+		
+		"171"	//Tribalman's Shiv 部落者刮刀
+		{
+			"playerclimb"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_AllocateParams"
+
+					"<enum>"
+					{
+						"name"	"attackdelay"
+						"type"	"bool"
+						"value"	"false"
+					}
+					"<enum>"
+					{
+						"name"	"upwardvel"
+						"type"	"float"
+						"value"	"250.0"
+					}
+				}
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_WriteReturn"
+
+					"return"	"changed"
+				}
+			}
+		}
+		"232"	//Bushwacka 灌木丛
+		{
+			"playerclimb"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_AllocateParams"
+
+					"<enum>"
+					{
+						"name"	"upwardvel"
+						"type"	"float"
+						"value"	"800.0"
+					}
+					"<enum>"
+					{
+						"name"	"health"
+						"type"	"float"
+						"value"	"55.0"
+					}
+				}
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_WriteReturn"
+
+					"return"	"changed"
+				}
+			}
+		}
+		"401"	//Shahanshah 诸王之王
+		{
+			"playerclimb"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_Shahanshah"
+					"vsh2target"	"player"
+				}
+			}
+		}
+		//Spy 间谍
+		"61, 1006"	//Ambassador 大使手枪
+		{
+			"btd_ambassador"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_ManageSelfTFCond"
+					"target"	"player"
+
+					"add"	"true"
+
+					"conditions"
+					{
+						"<enum>"
+						{
+							"id"	"32"
+							"duration"	"3.0"
+						}
+					}
+				}
+			}
+		}
+		
+
+		"461"	//Big Earner 暴利杀手
+		{
+			"btd_stab"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_ManageSelfTFCond"
+					"target"	"player"
+					"add"	"true"
+					"conditions"
+					{
+						"<enum>"
+						{
+							"id"	"32"
+							"duration"	"3.0"
+						}
+					}
+				}
+			}
+		}
+		
+	}
+}
