@@ -62,6 +62,7 @@ vsh_dust_showdown_final1
 workshop/vsh_intrusion_rc2.ugc2028022028
 workshop/vsh_leak.ugc2869092455
 workshop/vsh_pencil_ravine_v1_1.ugc2904088966
+workshop/vsh_aaaaa_b1c.ugc2266146879
 //vsh_shiri_peak_b3
 //vsh_megaman6_rc1
 //vsh_lobster_shore_rc1
