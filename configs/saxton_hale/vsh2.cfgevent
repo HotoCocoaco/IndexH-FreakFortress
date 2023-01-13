@@ -762,7 +762,7 @@
 					"<passive>"	"true"
 					"vsh2target"	"player"
 
-					"string"    "Boss Rage: %f"
+					"string"    " | BOSS愤怒值: %f"
 				}
 			}
 		}
