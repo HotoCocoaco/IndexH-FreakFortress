@@ -14,7 +14,7 @@ vsh_brewery_v3
 vsh_castle_siege_b11
 vsh_chemical_v1
 vsh_chimeralabs_v7
-vsh_chinatown_b3
+workshop/vsh_chinatown_b3.ugc974796690
 vsh_citypeak_v1
 vsh_coldvine_b1
 vsh_colossal_vessel_b5
@@ -23,7 +23,7 @@ vsh_crevice_rsfix
 vsh_detra_v3
 vsh_drejun_v3
 vsh_egyptyspot_reworked_b2c
-vsh_gyros_v5
+workshop/vsh_gyros_v5.ugc1107388241
 vsh_hakurei_shrine_bfix_1b
 vsh_impure_v3
 vsh_jealo_rc1
@@ -40,13 +40,13 @@ vsh_ram_shacked_final
 vsh_rockslide_2
 vsh_rooftops_v2
 vsh_rubble_final2
-vsh_seine_b3
+workshop/vsh_seine_v3.ugc1419638895
 vsh_snowdime_b2
 vsh_snowglobe_e2
 vsh_spaaaaace_v2
 vsh_split_b2
 vsh_starboard_rc2
-vsh_teul_rc3
+workshop/vsh_teul_rc3.ugc621143174
 vsh_tranquil_b5
 vsh_warebloom_r1a
 vsh_yammoe_rc3
