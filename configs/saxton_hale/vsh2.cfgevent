@@ -488,6 +488,45 @@
 
 		
 		//Heavy 机枪手
+
+		"41"	// Natascha 娜塔莎转轮机枪
+		{
+			"btd_takedamage"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_GetProp"
+					"target"	"player"
+
+					"<enum>"
+					{
+
+						"name"	"iMyHealth"
+						"type"	"int"
+						"size"	"7"
+						"prop"	"m_iHealth"
+						"datamap"	"false"
+					}
+				}
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_ManageSelfHeal"
+					"target"	"player"
+
+					"health"
+					{
+						"formula"	"A + 5"
+						"<enum>"
+						{
+							"token"	"A"
+							"value"	"i@iMyHealth"
+						}
+					}
+					"clamp"		 "450"
+				}
+			}
+		}
+
 		"43"	//Killing Gloves of Boxing 杀戮拳击手套
 		{
 			"btd_takedamage"
