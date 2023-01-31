@@ -27,7 +27,7 @@ vsh_gyros_v5
 vsh_hakurei_shrine_bfix_1b
 vsh_impure_v3
 vsh_jealo_rc1
-vsh_jungle_beach_v3
+workshop/vsh_jungle_beach_v3.ugc921434009
 vsh_manncohq_v14
 vsh_militaryzone_v3
 vsh_minegay_reworked_v2
