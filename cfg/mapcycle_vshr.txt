@@ -65,6 +65,7 @@ workshop/vsh_pencil_ravine_v1_1.ugc2904088966
 workshop/vsh_aaaaa_b1c.ugc2266146879
 workshop/vsh_citydirtbox_rc2.ugc454560465
 workshop/vsh_cosmos_b5.ugc2723455852
+workshop/vsh_estate_v1.ugc1822527053
 //vsh_shiri_peak_b3
 //vsh_megaman6_rc1
 //vsh_lobster_shore_rc1
