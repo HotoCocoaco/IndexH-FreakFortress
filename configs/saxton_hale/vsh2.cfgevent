@@ -61,6 +61,7 @@
 				{
 					"<enum>"	"freak_fortress_2/killingmann/theme_secondlife_fx.mp3"
 					"<enum>"	"airshot.wav"
+					"<enum>"	"saxton_hale/9000.wav"
 				}
 				"models"
 				{
@@ -286,6 +287,51 @@
 				}
 			}
 		}
+
+		// "416"	// The Market Gardener 市场花园铁锹
+		// {
+		// 	"think"
+		// 	{
+		// 		"<enum>"
+		// 		{
+		// 			"procedure"	"ConfigEvent_GetProp"
+		// 			"vsh2target"	"player"
+
+		// 			"<enum>"
+		// 			{
+		// 				"name"	"soldier_jumping"
+		// 				"size"	"4"
+		// 				"type"	"int"
+		// 				"prop"	"bInJump"
+		// 				"custom"	"vsh2player"
+		// 			}
+		// 		}
+
+		// 		"<enum>"
+		// 		{
+		// 			"procedure"	"ConfigEvent_JumpIf"
+		// 			"operators"	"1"
+		// 			"first"	"@soldier_jumping"
+		// 			"second"	"0"
+		// 			"skips"	"1"
+		// 		}
+
+		// 		"<enum>"
+		// 		{
+		// 			"procedure"	"ConfigEvent_ManageSelfTFCond"
+		// 			"vsh2target"	"player"
+		// 			"add"	"true"
+		// 			"conditions"
+		// 			{
+		// 				"<enum>"
+		// 				{
+		// 					"id"	"33"
+		// 					"duration"	"0.11"
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+		// }
 		
 		
 		
@@ -488,6 +534,45 @@
 
 		
 		//Heavy 机枪手
+
+		"41"	// Natascha 娜塔莎转轮机枪
+		{
+			"btd_takedamage"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_GetProp"
+					"target"	"player"
+
+					"<enum>"
+					{
+
+						"name"	"iMyHealth"
+						"type"	"int"
+						"size"	"7"
+						"prop"	"m_iHealth"
+						"datamap"	"false"
+					}
+				}
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_ManageSelfHeal"
+					"target"	"player"
+
+					"health"
+					{
+						"formula"	"A + 5"
+						"<enum>"
+						{
+							"token"	"A"
+							"value"	"i@iMyHealth"
+						}
+					}
+					"clamp"		 "450"
+				}
+			}
+		}
+
 		"43"	//Killing Gloves of Boxing 杀戮拳击手套
 		{
 			"btd_takedamage"
