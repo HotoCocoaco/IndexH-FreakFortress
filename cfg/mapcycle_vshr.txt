@@ -24,7 +24,7 @@ vsh_detra_v3
 vsh_drejun_v3
 vsh_egyptyspot_reworked_b2c
 workshop/vsh_gyros_v5.ugc1107388241
-vsh_hakurei_shrine_bfix_1b
+workshop/vsh_hakurei_shrine_v3.ugc456104579
 vsh_impure_v3
 vsh_jealo_rc1
 workshop/vsh_jungle_beach_v3.ugc921434009
