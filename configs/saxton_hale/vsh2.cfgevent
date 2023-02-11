@@ -208,7 +208,7 @@
 							"text"  "你现在是 %N 召唤的僵尸！攻击敌人！"
 
 							"classname"  "tf_weapon_bat"
-							"attributes" "68 ; -1 ; 1 ; 0.4 ; 881 ; -15"
+							"attributes" "68 ; -1 ; 1 ; 0.4 ; 881 ; -15; 69 ; 0.0; 109 ; 0.0"
 							"index"	  "190"
 							"ammo"		"-9"
 							"clip"		"-9"
