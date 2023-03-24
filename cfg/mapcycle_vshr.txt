@@ -69,6 +69,7 @@ workshop/vsh_estate_v1.ugc1822527053
 workshop/vsh_dunger_b2a.ugc454154381
 vsh_limbo_uk_a1
 vsh_runes_v2
+vsh_xion
 //vsh_shiri_peak_b3
 //vsh_megaman6_rc1
 //vsh_lobster_shore_rc1
