@@ -99,7 +99,7 @@
 
 					"health"
 					{
-						"formula"	"A + 5"
+						"formula"	"A + 10"
 						"<enum>"
 						{
 							"token"	"A"
