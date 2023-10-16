@@ -927,17 +927,7 @@
 				}
 			}
 		}
-		"401"	//Shahanshah 诸王之王
-		{
-			"playerclimb"
-			{
-				"<enum>"
-				{
-					"procedure"	"ConfigEvent_Shahanshah"
-					"vsh2target"	"player"
-				}
-			}
-		}
+		
 		//Spy 间谍
 		"61, 1006"	//Ambassador 大使手枪
 		{
