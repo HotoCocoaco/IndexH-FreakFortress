@@ -843,6 +843,31 @@
 			{
 				"<enum>"
 				{
+					"procedure"	"ConfigEvent_GetProp"
+					"target"	"player"
+
+					"<enum>"
+					{
+						"name"	"iLifeState"
+						"type"	"int"
+						"size"	"4"
+						"prop"	"m_lifeState"
+						"datamap"	"false"
+					}
+				}
+
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_JumpIf"
+					"<passive>"	"true"
+					"first"		"@iLifeState"
+					"second"	"0"	// 0 - Alive
+					"operators"	"100" // Grater than 0 -> not alive
+					"skips"		"1"
+				}
+				
+				"<enum>"
+				{
 					"procedure"	"ConfigEvent_ViewRage"
 					"<passive>"	"true"
 					"vsh2target"	"player"
