@@ -409,6 +409,30 @@
 			}
 		}
 		//Demoman 爆破手
+		"1151"	//The Iron Bomber 铁弹发射器
+		{
+			"playercrits"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_AllocateParams"
+
+					"<enum>"
+					{
+						"name"	"crit_flags"
+						"type"	"int"
+						"value"	"0"
+					}
+				}
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_WriteReturn"
+
+					"return"	"changed"
+				}
+			}
+		}
+
 		"131, 1144"	//Chargin' Targe 冲锋盾
 		{
 			"btd_takedamage"
