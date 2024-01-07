@@ -69,6 +69,45 @@
 				}
 			}
 		}
+
+		"btd_takedamage"
+		{
+			"<enum>"
+			{
+				"procedure"	"ConfigEvent_GetProp"
+				"enttarget"	"weapon"
+
+				"<enum>"
+				{
+					"name"	"weapon_index"
+					"type"	"int"
+					"prop"	"m_iItemDefinitionIndex"
+					"datamap"	"false"
+				}
+			}
+			"<enum>"
+			{
+				"procedure"	"ConfigEvent_JumpIf"
+				"first"	"@weapon_index"
+				"second"	"44"
+				"operators"	"1000001"
+				"skips"	"1"
+			}
+			"<enum>"
+			{
+				"procedure"	"ConfigEvent_SandManStun"
+				"target"	"player"
+				"vsh2victim"	"victim"
+
+				"level1"	"1.0"
+				"level2"	"2.0"
+				"level3"	"3.0"
+				"level4"	"4.0"
+				"level5"	"5.0"
+				"level6"	"6.0"
+				"level7"	"7.0"
+			}
+		}
 	}
 	"weapons"
 	{
@@ -110,47 +149,7 @@
 				}
 			}
 		}
-		"44"	//Sandman 睡魔
-		{
-			"btd_takedamage"
-			{
-				"<enum>"
-				{
-					"procedure"	"ConfigEvent_GetProp"
-					"enttarget"	"weapon"
 
-					"<enum>"
-					{
-						"name"	"weapon_index"
-						"type"	"int"
-						"prop"	"m_iItemDefinitionIndex"
-						"datamap"	"false"
-					}
-				}
-				"<enum>"
-				{
-					"procedure"	"ConfigEvent_JumpIf"
-					"first"	"@weapon_index"
-					"second"	"44"
-					"operators"	"1000001"
-					"skips"	"1"
-				}
-				"<enum>"
-				{
-					"procedure"	"ConfigEvent_SandManStun"
-					"target"	"player"
-					"vsh2victim"	"victim"
-
-					"level1"	"1.0"
-					"level2"	"2.0"
-					"level3"	"3.0"
-					"level4"	"4.0"
-					"level5"	"5.0"
-					"level6"	"6.0"
-					"level7"	"7.0"
-				}
-			}
-		}
 		//Soldier 士兵
 		"441"	//Cow Mangler 5000 绞牛机5000
 		{
