@@ -71,6 +71,7 @@ vsh_limbo_uk_a1
 vsh_runes_v2
 vsh_xion
 workshop/vsh_void_a1f.ugc2252736418
+vsh_island_outpost_v2e
 //vsh_shiri_peak_b3
 //vsh_megaman6_rc1
 //vsh_lobster_shore_rc1
