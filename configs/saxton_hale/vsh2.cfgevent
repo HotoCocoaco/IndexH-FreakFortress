@@ -148,9 +148,105 @@
 					"clamp"		 "199"
 				}
 			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"袖珍手枪的治疗可以超量治疗"
+				}
+			}
+		}
+
+		"1103"	// 偷袭之力 Back Scatter
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"偷袭之力会发射火箭而不是子弹"
+				}
+			}
+		}
+
+		"772"	// 娃娃脸的冲击波 Baby Face Blaster
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"娃娃脸的冲击波的能量条自然衰减"
+				}
+			}
+		}
+
+		"44"	// 睡魔 Sandman
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"睡魔的球可以击晕BOSS"
+				}
+			}
+		}
+
+		"325, 452"	// 波士顿狼牙棒 Boston Basher
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"狼牙棒会使你变成中世纪战士"
+				}
+			}
+		}
+
+		"648"	// 包装纸杀手 Wrap Assassin
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"包装纸杀手会有更多的球"
+				}
+			}
 		}
 
 		//Soldier 士兵
+
+		"127"	// 精确打击者 Direct Hit
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"精确打击者打中空中的敌人会爆击"
+				}
+			}
+		}
+
 		"441"	//Cow Mangler 5000 绞牛机5000
 		{
 			"banner_start"
@@ -217,6 +313,17 @@
 					}
 				}
 			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"军队的支援激活时可以召唤僵尸，并在范围内获得防御特性"
+				}
+			}
 		}
 		"129, 1001"	//Buff Banner 战旗
 		{
@@ -255,6 +362,17 @@
 					"duration"	"5.0"
 				}
 			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"战旗激活时能发射超级火力"
+				}
+			}
 		}
 		"354"	//Concheror 征服者战旗
 		{
@@ -268,6 +386,17 @@
 					"amount"	"30"
 					"slot"	"0"
 				}
+
+				"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"征服者战旗激活时能恢复弹药"
+				}
+			}
 			}
 		}
 		"442"	//Righteous Bison 正义野牛
@@ -285,54 +414,46 @@
 					"duration"	"-1.0"
 				}
 			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"正义野牛无限弹匣"
+				}
+			}
 		}
 
-		// "416"	// The Market Gardener 市场花园铁锹
-		// {
-		// 	"think"
-		// 	{
-		// 		"<enum>"
-		// 		{
-		// 			"procedure"	"ConfigEvent_GetProp"
-		// 			"vsh2target"	"player"
+		"416"	// 市场花园铁锹 Market Gardener
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"市场花园铁锹使用花园铲可以对BOSS造成大量伤害"
+				}
+			}
+		}
 
-		// 			"<enum>"
-		// 			{
-		// 				"name"	"soldier_jumping"
-		// 				"size"	"4"
-		// 				"type"	"int"
-		// 				"prop"	"bInJump"
-		// 				"custom"	"vsh2player"
-		// 			}
-		// 		}
-
-		// 		"<enum>"
-		// 		{
-		// 			"procedure"	"ConfigEvent_JumpIf"
-		// 			"operators"	"1"
-		// 			"first"	"@soldier_jumping"
-		// 			"second"	"0"
-		// 			"skips"	"1"
-		// 		}
-
-		// 		"<enum>"
-		// 		{
-		// 			"procedure"	"ConfigEvent_ManageSelfTFCond"
-		// 			"vsh2target"	"player"
-		// 			"add"	"true"
-		// 			"conditions"
-		// 			{
-		// 				"<enum>"
-		// 				{
-		// 					"id"	"33"
-		// 					"duration"	"0.11"
-		// 				}
-		// 			}
-		// 		}
-		// 	}
-		// }
-		
-		
+		"128"	// 十字镐 Equalizer
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"十字镐的伤害增加，打中敌人能使自身加速"
+				}
+			}
+		}
 		
 		//Pyro 火焰兵
 		"21, 208, 40, 215, 659, 741, 798, 807, 887, 896, 905, 914, 963, 972, 1146, 1178, 15005, 15017, 15030, 15034, 15049, 15054, 15066, 15067, 15068, 15089, 15090, 15115, 15141, 30474"
@@ -368,6 +489,17 @@
 						}
 					}
 					"clamp"		 "280"
+				}
+			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"火焰喷射器攻击敌人可以给自己超量治疗"
 				}
 			}
 		}
@@ -406,7 +538,131 @@
 					"clamp"		 "220"
 				}
 			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"燃素喷射器激活呜呜时能够获得防御增益"
+				}
+			}
 		}
+
+		"1178"	// 龙之怒焰
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"龙之怒焰造成伤害可作为弹药恢复"
+				}
+			}
+		}
+
+		"1179"	// 热能推进器 Thermal Thruster
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"热能推进器可以在空中转向，免疫摔伤"
+				}
+			}
+		}
+
+		"1180"	// 纵火者的油桶 Gas Passer
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"投掷油桶会造成爆炸"
+				}
+			}
+		}
+
+		"351"	// 起爆者 Detonator
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"起爆者可以自爆起跳"
+				}
+			}
+		}
+
+		"348"	// 熔岩战斧 Sharpened Volcano Fragment
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"熔岩战斧会使你成为中世纪战士"
+				}
+			}
+		}
+
+		"153, 466"	// 拆迁者 Homewrecker
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"拆迁者的攻击可以击退敌人"
+				}
+			}
+		}
+
+		"1181"	// 灼热之手 Hot Hand
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"灼热之手增大攻击范围，打中队友可以加速"
+				}
+			}
+		}
+
+		"593"	// 三度烧伤 Third Degree
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"手持三度烧伤时，医生治疗你时充能速度增加，同时你的近战伤害也增加"
+				}
+			}
+		}
+
 		//Demoman 爆破手
 		"1151"	//The Iron Bomber 铁弹发射器
 		{
@@ -428,6 +684,17 @@
 					"procedure"	"ConfigEvent_WriteReturn"
 
 					"return"	"changed"
+				}
+			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"铁弹发射器可以连发榴弹"
 				}
 			}
 		}
@@ -555,8 +822,106 @@
 			}
 		}
 
+		"405, 608"	// 阿里巴巴的尖头靴 Ali Baba's Wee Booties
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"靴子或假腿可以让你获得爆炸跳的减伤抗性"
+				}
+			}
+		}
+
+		"130"	// 苏格兰防御者 Scottish Resistance
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"苏格兰防御者的攻击不能造成击退"
+				}
+			}
+		}
+
+		"1150"	// 快速黏弹发射器 Quickiebomb Launcher
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"快速黏弹发射器能瞬间引爆发射的黏弹"
+				}
+			}
+		}
+
+		"307"	// 木柄手榴弹 Ullapool Caber
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"木柄手榴弹会变大，攻击造成自杀式爆炸"
+				}
+			}
+		}
+
+		"312, 266, 482"	// 苏格兰长剑 The Eyelander
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"苏格兰长剑攻击BOSS可以获得猎头，打中敌人恢复自身生命值"
+				}
+			}
+		}
+
+		"404"	// 波斯弯刀 Persian Persuader
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"击中敌人可以恢复生命值和冲锋能量，拾取的弹药变成冲锋能量"
+				}
+			}
+		}
+
 		
 		//Heavy 机枪手
+
+		"15, 202, 654, 793, 802, 882, 891, 900, 909, 958, 967, 15004, 15020, 15026, 15031, 15040, 15055, 15086, 15087, 15088, 15098, 15099, 15123, 15124, 15125, 15147"	// 转轮机枪 Minigun
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"转轮机枪高速转动下自身移动速度依然很快，并且不用放下枪口即可切换武器"
+				}
+			}
+		}
 
 		"41"	// Natascha 娜塔莎转轮机枪
 		{
@@ -594,6 +959,101 @@
 					"clamp"		 "450"
 				}
 			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"娜塔莎转轮机枪打中BOSS可以给自己超量治疗，无限子弹"
+				}
+			}
+		}
+
+		"312"	// 黄铜猛兽 Brass Beast
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"黄铜猛兽伤害高，还可以使用愤怒击退"
+				}
+			}
+		}
+
+		"811, 832"	// 火龙转轮机枪 Huo-Long Heater
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"火龙转轮机枪对燃烧的敌人伤害高，但是弹药少，需要切换成其他武器才能从补给器补充弹药"
+				}
+			}
+		}
+
+		"312"	// 黄铜猛兽 Brass Beast
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"黄铜猛兽伤害高，还可以使用愤怒击退"
+				}
+			}
+		}
+
+		"42, 863, 1002. 1190"	// 三明治 Sandvich 第二名的香蕉 Second Banana
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"三明治和香蕉使用速度加快"
+				}
+			}
+		}
+
+		"159, 433"	// 达勒克斯巧克力块 Dalokohs Bar
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"巧克力块吃完后会补充弹药"
+				}
+			}
+		}
+
+		"425"	// 家族运营枪 Family Business
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"家族运营枪会发射一颗瞬间引爆的榴弹，可以爆炸起跳"
+				}
+			}
 		}
 
 		"43"	//Killing Gloves of Boxing 杀戮拳击手套
@@ -610,6 +1070,17 @@
 						"id"	"56"
 						"duration"	"7.0"
 					}
+				}
+			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"杀戮拳击手套打中BOSS可以获得持续时间爆击"
 				}
 			}
 		}
@@ -647,9 +1118,76 @@
 					"clamp"	"500"
 				}
 			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"勇士之魂打中BOSS可以超量治疗"
+				}
+			}
 		}
+
+		"426"	// 驱逐警告 Eviction Notice
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"驱逐警告使你变成中世纪战士"
+				}
+			}
+		}
+
+		"239, 1084, 1100"	// 紧急逃跑手套 Gloves of Running Urgently
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"紧急逃跑手套让你既能跑又能跳"
+				}
+			}
+		}
+
 		//Engineer 工程师
 		
+		"141, 1004"	// 边境裁决者 Frontier Justice
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"边境裁决者在步哨锁定BOSS时能打出爆击"
+				}
+			}
+		}
+
+		"527"	// 寡妇制造者 Widowmaker
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"寡妇制造者弹道更击中，开火消耗的金属量降低"
+				}
+			}
+		}
 		
 		"140, 1086, 30668"	//Wrangler 遥控手柄
 		{
@@ -670,7 +1208,33 @@
 					}
 				}
 			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"遥控手柄在使用时能打出迷你爆击"
+				}
+			}
 		}
+
+		"528"	// 短路发生器 Short Circuit
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"寡妇制造者弹道更击中，开火消耗的金属量降低"
+				}
+			}
+		}
+
 		"589"	//Eureka Effect 传送扳手
 		{
 			"eureka_teleport"
@@ -724,7 +1288,47 @@
 					"string"	" | 传送扳手：%f 秒"
 				}
 			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"传送扳手进行传送会晕头转向"
+				}
+			}
 		}
+
+		"142"	// 枪炮工之臂 The Gunslinger
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"机械臂连击BOSS第三次时会造成击退"
+				}
+			}
+		}
+
+		"155"	// 南部的款待 Southern Hospitality
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"南部的款待可以制作更小的建筑，补给器范围增加，可以自伤跳"
+				}
+			}
+		}
+
 		//Medic 医生
 		"36"	//Blutsauger 吸血鬼针筒枪
 		{
@@ -775,6 +1379,17 @@
 					"enttarget"	"projectile"
 					"damage"	"45.0"
 					"radius"	"120.0"
+				}
+			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"十字弩能产生爆炸，可以用来爆炸跳"
 				}
 			}
 		}
@@ -836,6 +1451,17 @@
 					}
 				}
 			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"闪电战医疗枪激活Ubercharge时使周围的队友都获得爆击"
+				}
+			}
 		}
 		"411"	//Quick Fix 快速医疗枪
 		{
@@ -857,6 +1483,17 @@
 							"duration"	"5.0"
 						}
 					}
+				}
+			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"快速医疗枪激活Ubercharge时使周围的队友都获得加速"
 				}
 			}
 		}
@@ -898,6 +1535,17 @@
 					"string"    " | BOSS愤怒值: %f"
 				}
 			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"希波克拉底的塑像允许你看到BOSS的愤怒值"
+				}
+			}
 		}
 		//Sniper 狙击手
 		"56, 1005, 1092"	//Huntsman 猎人短弓
@@ -913,6 +1561,45 @@
 					"enttarget"	"projectile"
 					"damage"	"60.0"
 					"radius"	"150.0"
+				}
+			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"弓箭的箭矢碰撞时爆炸，命中敌人可以恢复生命值"
+				}
+			}
+		}
+
+		"1098"	// 经典狙击步枪 The Classic
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"经典狙击步枪可以快速开火，右键可发射炸弹"
+				}
+			}
+		}
+
+		"751"	// 扫荡者卡宾 Cleaner's Carbine
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"扫荡者卡宾提高精确度，主武器无弹药"
 				}
 			}
 		}
@@ -945,6 +1632,17 @@
 					"return"	"changed"
 				}
 			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"部落者刮刀爬墙无延迟"
+				}
+			}
 		}
 		"232"	//Bushwacka 灌木丛
 		{
@@ -974,6 +1672,31 @@
 					"return"	"changed"
 				}
 			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"灌木丛爬墙更高，消耗血量更多"
+				}
+			}
+		}
+
+		"401"	// 诸王之王
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"诸王之王爬墙增加水平力量，消耗血量增加。"
+				}
+			}
 		}
 		
 		//Spy 间谍
@@ -998,8 +1721,32 @@
 					}
 				}
 			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"大使手枪爆头后可以获得加速"
+				}
+			}
 		}
-		
+
+		"460"	// 执法者 Enforcer
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"执法者伪装时伤害增加"
+				}
+			}
+		}
 
 		"461"	//Big Earner 暴利杀手
 		{
@@ -1018,6 +1765,59 @@
 							"duration"	"3.0"
 						}
 					}
+				}
+			}
+
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"暴利杀手背刺后获得更多加速"
+				}
+			}
+		}
+
+		"225, 574"	// 永生的回报
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"永生的回报前三次背刺0伤害，第四次背刺造成巨大伤害"
+				}
+			}
+		}
+
+		"735, 736, 810, 831, 933, 1080, 1102"	// 电子工兵 Sapper
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"电子工兵可以对BOSS和小弟使用"
+				}
+			}
+		}
+
+		"60"	// 隐形刺客 Cloak and Dagger
+		{
+			"prep_redteam"
+			{
+				"<enum>"
+				{
+					"procedure"	    "ConfigEvent_PrintToChat"
+					"<passive>"	"true"
+					"vsh2target"	"player"
+					"text"		"隐形刺客隐身时可跳得更高跑得更快，但会让自己开始流血"
 				}
 			}
 		}
