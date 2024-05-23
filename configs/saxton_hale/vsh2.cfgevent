@@ -74,6 +74,15 @@
 		{
 			"<enum>"
 			{
+				"procedure"	"ConfigEvent_JumpIf"
+				"first"	"@weapon"
+				"second"	"1"
+				"operators"	"10"
+				"skips"	"3"
+			}
+			
+			"<enum>"
+			{
 				"procedure"	"ConfigEvent_GetProp"
 				"enttarget"	"weapon"
 
