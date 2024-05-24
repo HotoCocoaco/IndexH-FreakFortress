@@ -92,7 +92,7 @@
 				"first"	"@victim_bIsBoss"
 				"second"	"1"
 				"operators"	"1000001"	// not equal
-				"skips"	"2"	// 跳过2次
+				"skips"	"3"	// 跳过2次
 			}
 
 			// 是否为睡魔球检测
@@ -101,6 +101,15 @@
 				"procedure"	"ConfigEvent_JumpIf"
 				"first"	"@custom"
 				"second"	"22"	// TF_CUSTOM_BASEBALL = 22
+				"operators"	"1000001"	// not equal
+				"skips"	"2"	// 跳过1次
+			}
+
+			"<enum>"
+			{
+				"procedure"	"ConfigEvent_JumpIf"
+				"first"	"@weapon"
+				"second"	"2"	// TF_WEAPON_BAT_WOOD = 2
 				"operators"	"1000001"	// not equal
 				"skips"	"1"	// 跳过1次
 			}
