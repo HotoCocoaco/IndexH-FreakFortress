@@ -70,42 +70,45 @@
 			}
 		}
 
-		"btd_takedamage"
+		"player_hurt"
 		{
+			// 受害者是否为BOSS检测
 			"<enum>"
 			{
-				"procedure"	"ConfigEvent_JumpIf"
-				"first"	"@weapon"
-				"second"	"1"
-				"operators"	"10"
-				"skips"	"3"
+				"procedure"	"ConfigEvent_GetProp"
+				"vsh2target"	"victim"
+
+				"<enum>"
+				{
+					"name"	"victim_bIsBoss"
+					"custom"	"vsh2player"
+					"prop"	"bIsBoss"
+				}
 			}
 			
 			"<enum>"
 			{
-				"procedure"	"ConfigEvent_GetProp"
-				"enttarget"	"weapon"
-
-				"<enum>"
-				{
-					"name"	"weapon_index"
-					"type"	"int"
-					"prop"	"m_iItemDefinitionIndex"
-					"datamap"	"false"
-				}
+				"procedure"	"ConfigEvent_JumpIf"
+				"first"	"@victim_bIsBoss"
+				"second"	"1"
+				"operators"	"1000001"	// not equal
+				"skips"	"2"	// 跳过2次
 			}
+
+			// 是否为睡魔球检测
 			"<enum>"
 			{
 				"procedure"	"ConfigEvent_JumpIf"
-				"first"	"@weapon_index"
-				"second"	"44"
-				"operators"	"1000001"
-				"skips"	"1"
+				"first"	"@custom"
+				"second"	"22"	// TF_CUSTOM_BASEBALL = 22
+				"operators"	"1000001"	// not equal
+				"skips"	"1"	// 跳过1次
 			}
+
 			"<enum>"
 			{
 				"procedure"	"ConfigEvent_SandManStun"
-				"target"	"player"
+				"vsh2target"	"player"
 				"vsh2victim"	"victim"
 
 				"level1"	"1.0"
