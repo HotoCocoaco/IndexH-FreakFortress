@@ -1251,7 +1251,7 @@
 					"procedure"	    "ConfigEvent_PrintToChat"
 					"<passive>"	"true"
 					"vsh2target"	"player"
-					"text"		"寡妇制造者弹道更击中，开火消耗的金属量降低"
+					"text"		"短路发生器的能量球会爆炸，可以用来爆炸跳。"
 				}
 			}
 		}
