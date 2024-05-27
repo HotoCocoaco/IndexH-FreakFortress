@@ -1626,7 +1626,7 @@
 		}
 
 		// SMG 狙击手原配冲锋枪
-		"16, 203, 1149, 15001, 15022, 15032, 15037, 15058, 15076, 15110, 15134, 15153"
+		"16, 203, 1149"
 		{
 			"playercrits"
 			{
@@ -1641,6 +1641,82 @@
 						"value"	"1"
 					}
 				}
+
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_WriteReturn"
+
+					"return"	"changed"
+				}
+			}
+		}
+
+		"15001, 15022, 15032"
+		{
+			"playercrits"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_AllocateParams"
+
+					"<enum>"
+					{
+						"name"	"crit_flags"
+						"type"	"int"
+						"value"	"1"
+					}
+				}
+
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_WriteReturn"
+
+					"return"	"changed"
+				}
+			}
+		}
+
+		"15037, 15058, 15076"
+		{
+			"playercrits"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_AllocateParams"
+
+					"<enum>"
+					{
+						"name"	"crit_flags"
+						"type"	"int"
+						"value"	"1"
+					}
+				}
+
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_WriteReturn"
+
+					"return"	"changed"
+				}
+			}
+		}
+
+		"15110, 15134, 15153"
+		{
+			"playercrits"
+			{
+				"<enum>"
+				{
+					"procedure"	"ConfigEvent_AllocateParams"
+
+					"<enum>"
+					{
+						"name"	"crit_flags"
+						"type"	"int"
+						"value"	"1"
+					}
+				}
+
 				"<enum>"
 				{
 					"procedure"	"ConfigEvent_WriteReturn"
