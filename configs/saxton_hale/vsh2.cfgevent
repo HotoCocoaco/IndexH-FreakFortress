@@ -130,38 +130,6 @@
 				"level7"	"7.0"
 			}
 		}
-
-		"falldamage"
-		{
-			"<enum>"
-			{
-				"procedure"	"ConfigEvent_GetProp"
-				"vsh2target"	"player"
-
-				"<enum>"
-				{
-					"name"	"class"
-					"custom"	"vsh2player"
-					"prop"	"iTFClass"
-				}
-			}
-
-			"<enum>"
-			{
-				"procedure"	"ConfigEvent_JumpIf"
-				"first"	"@class"
-				"second"	"2"	// TFClass_Sniper = 2
-				"operators"	"1000001"	// not equal
-				"skips"	"1"	// 跳过1次
-			}
-
-			"<enum>"
-			{
-				"procedure"	"ConfigEvent_WriteReturn"
-
-				"return"	"changed"
-			}
-		}
 	}
 	"weapons"
 	{
