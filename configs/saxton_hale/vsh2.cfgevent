@@ -277,7 +277,7 @@
 				{
 					"procedure"	"ConfigEvent_SetClipEnergy"
 					"<passive>"	"true"
-					"vsh2target"	"player"
+					"vsh2target"	"owner"
 
 					"slot"	"0"
 					"ammount"	"80.0"
