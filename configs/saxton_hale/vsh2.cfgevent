@@ -692,13 +692,22 @@
 			{
 				"<enum>"
 				{
+					"procedure"	"ConfigEvent_JumpIf"
+					"first"	"@crit_flags"
+					"second"	"2"	// 2 = full_crits
+					"operators"	"1000001"	// not equal
+					"skips"	"2"	// 跳过2次
+				}
+				
+				"<enum>"
+				{
 					"procedure"	"ConfigEvent_AllocateParams"
 
 					"<enum>"
 					{
 						"name"	"crit_flags"
 						"type"	"int"
-						"value"	"0"
+						"value"	"1"
 					}
 				}
 				"<enum>"
