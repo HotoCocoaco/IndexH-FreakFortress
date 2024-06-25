@@ -77,6 +77,7 @@ vsh_the_passage
 vsh_forest_1b
 vsh_foreststation_c1
 vsh_byd_013
+vsh_gaypool_v1
 //vsh_shiri_peak_b3
 //vsh_megaman6_rc1
 //vsh_lobster_shore_rc1
